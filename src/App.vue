@@ -8,14 +8,19 @@
       </v-container>
     </v-content>
     <v-footer app></v-footer>
+    <snackbar />
   </v-app>
 </template>
 
 <script>
+import snackbar from "./layout/snackbar";
 import "vuetify/dist/vuetify.min.css";
 
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    snackbar
+  }
 };
 </script>
 

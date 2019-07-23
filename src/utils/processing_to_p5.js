@@ -2,6 +2,10 @@ const rules = [
   {
     from: /void (\w*)\(\)/gm,
     to: "function $1()"
+  },
+  {
+    from: /createCanvas\((\d+),\s?(\d+)\)/gm,
+    to: "size($1, $2)"
   }
 ];
 

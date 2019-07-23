@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h3>{{ title }}</h3>
+    <v-layout flex>
+      <h3>{{ title }}</h3>
+      <v-spacer />
+      <btn-to-copy :value="content" />
+    </v-layout>
     <codemirror v-model="content" :options="cmOptions" />
   </div>
 </template>
@@ -9,9 +13,12 @@ import { codemirror } from "vue-codemirror";
 import "codemirror/mode/javascript/javascript.js";
 import "codemirror/lib/codemirror.css";
 
+import BtnToCopy from "./btn-to-copy";
+
 export default {
   components: {
-    codemirror
+    codemirror,
+    "btn-to-copy": BtnToCopy
   },
   props: {
     title: { type: String, default: "" },

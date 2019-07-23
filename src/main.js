@@ -1,11 +1,18 @@
 import Vue from "vue";
+
 import App from "./App.vue";
 
 import Vuetify from "vuetify";
-Vue.use(Vuetify);
+import "material-design-icons-iconfont/dist/material-design-icons.css";
+Vue.use(Vuetify, {
+  iconfont: "md"
+});
 
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
+
+import VueClipboard from "vue-clipboard2";
+Vue.use(VueClipboard);
 
 import routes from "./routes";
 

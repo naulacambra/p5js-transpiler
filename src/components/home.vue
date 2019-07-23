@@ -2,10 +2,10 @@
   <v-container fluid fill-height>
     <v-layout flex wrap justify-center align-center>
       <v-flex sm6 xs6 md6>
-        <editor title="p5.js" v-model="leftContent" />
+        <editor title="Processing" v-model="leftContent" />
       </v-flex>
       <v-flex md6>
-        <editor title="Processing" v-model="rightContent" />
+        <editor title="p5.js" v-model="rightContent" />
       </v-flex>
     </v-layout>
   </v-container>
