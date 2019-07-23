@@ -8,11 +8,11 @@ const rules = [
     to: "console.log($1)"
   },
   {
-    from: /(int|float|double|long|char|String|Array|PGraphics)\s(\w*)(;|\s=)/gm,
+    from: /(int|float|double|long|char|String|Array|PGraphics)\[?\]?\s(\w*)(;|\s=)/gm,
     to: "let $2$3"
   },
   {
-    from: /(int|float|double|long|char|String|Array)\s(\w*)([,)])/gm,
+    from: /(int|float|double|long|char|String|Array|int)\[?\]?\s(\w*)([,)])/gm,
     to: "$2$3"
   },
   {
@@ -20,12 +20,20 @@ const rules = [
     to: "function $1($2)"
   },
   {
-    from: /(\w*\.beginDraw\(\))/gm,
+    from: /(\w*\.(beginDraw|endDraw)\(\))/gm,
     to: "// $1"
   },
   {
-    from: /(\w*\.endDraw\(\))/gm,
-    to: "// $1"
+    from: /{([\w\d,\s]*)}/gm,
+    to: "[$1]"
+  },
+  {
+    from: /(pushMatrix)\(\);/gm,
+    to: "push();"
+  },
+  {
+    from: /(popMatrix)\(\);/gm,
+    to: "pop();"
   }
 ];
 

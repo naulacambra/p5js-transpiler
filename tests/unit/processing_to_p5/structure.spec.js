@@ -1,4 +1,4 @@
-import processing_to_p5 from "../../../../src/utils/processing_to_p5";
+import processing_to_p5 from "../../../src/utils/processing_to_p5";
 
 test("empty", () => {
   expect(processing_to_p5("")).toBe("");
