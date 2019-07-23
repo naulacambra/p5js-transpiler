@@ -30,9 +30,9 @@ const rules = [
 ];
 
 export default function(content) {
+  if (!content) return content;
   if (!/setup/gm.test(content)) {
     content = `function setup() { \n${content}\n}`;
   }
-  rules.forEach(r => (content = content.replace(r.from, r.to)));
-  return content;
+  return rules.reduce((acc, curr) => acc.replace(curr.from, curr.to), content);
 }
