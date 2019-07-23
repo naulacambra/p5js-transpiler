@@ -4,8 +4,16 @@ const rules = [
     to: "function $1()"
   },
   {
-    from: /createCanvas\((\d+),\s?(\d+)\)/gm,
-    to: "size($1, $2)"
+    from: /size\((\d+),\s?(\d+)\)/gm,
+    to: "createCanvas($1, $2)"
+  },
+  {
+    from: /println\((.*)\)/gm,
+    to: "console.log($1)"
+  },
+  {
+    from: /(int|float|double|long|char|String|Array)\s/gm,
+    to: "let "
   }
 ];
 

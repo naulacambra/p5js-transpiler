@@ -3,7 +3,7 @@
     <!-- <v-navigation-drawer app></v-navigation-drawer> -->
     <v-toolbar app></v-toolbar>
     <v-content>
-      <v-container fluid>
+      <v-container fluid fill-height>
         <router-view></router-view>
       </v-container>
     </v-content>
