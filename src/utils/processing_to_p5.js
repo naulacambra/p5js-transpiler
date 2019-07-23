@@ -8,11 +8,11 @@ const rules = [
     to: "console.log($1)"
   },
   {
-    from: /(int|float|double|long|char|String|Array|PGraphics)\[?\]?\s(\w*)(;|\s=)/gm,
+    from: /(int|float|boolean|double|long|char|String|Array|PGraphics)\[?\]?\s(\w*)(;|\s=)/gm,
     to: "let $2$3"
   },
   {
-    from: /(int|float|double|long|char|String|Array|int)\[?\]?\s(\w*)([,)])/gm,
+    from: /(int|float|boolean|double|long|char|String|Array|int)\[?\]?\s(\w*)([,)])/gm,
     to: "$2$3"
   },
   {
@@ -34,6 +34,15 @@ const rules = [
   {
     from: /(popMatrix)\(\);/gm,
     to: "pop();"
+  },
+  {
+    from: /(.*createFont.*)/gm,
+    to:
+      "// $1\t\t// https://github.com/processing/p5.js/issues/3706#issuecomment-487367169"
+  },
+  {
+    from: /.length\(\)/gm,
+    to: ".length"
   }
 ];
 
