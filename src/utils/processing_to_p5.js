@@ -43,6 +43,10 @@ const rules = [
   {
     from: /.length\(\)/gm,
     to: ".length"
+  },
+  {
+    from: /new (int|float|boolean|double|long|char|String|Array|int)\[(.*)\]/gm,
+    to: "new Array($2)"
   }
 ];
 
