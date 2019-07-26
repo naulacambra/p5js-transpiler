@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-layout flex>
+    <v-row class="flex">
       <h3>{{ title }}</h3>
       <v-spacer />
       <btn-to-copy :value="content" />
-    </v-layout>
+    </v-row>
     <codemirror v-model="content" :options="cmOptions" />
   </div>
 </template>

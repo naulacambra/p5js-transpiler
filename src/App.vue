@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <!-- <v-navigation-drawer app></v-navigation-drawer> -->
-    <v-toolbar app></v-toolbar>
+    <toolbar :app="app"></toolbar>
     <v-content>
-      <v-container fluid fill-height>
+      <v-container class="fill-height" fluid>
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -14,12 +14,14 @@
 
 <script>
 import snackbar from "./layout/snackbar";
+import toolbar from "./layout/toolbar";
 import "vuetify/dist/vuetify.min.css";
 
 export default {
   name: "app",
   components: {
-    snackbar
+    snackbar,
+    toolbar
   }
 };
 </script>

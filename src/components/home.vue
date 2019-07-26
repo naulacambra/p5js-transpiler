@@ -1,13 +1,13 @@
 <template>
-  <v-layout flex justify-center>
-    <v-flex sm12 xs6 md3>
+  <v-row class="flex" justify="center">
+    <v-col sm="12" cols="6" md="3">
       <editor title="Processing" v-model="leftContent" />
       <editor title="p5.js" v-model="rightContent" />
-    </v-flex>
-    <v-flex sm12 xs6 md9>
+    </v-col>
+    <v-col sm="12" cols="6" md="9">
       <p5-viewer />
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 <script>
 import Editor from "./editor";
