@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- <v-navigation-drawer app></v-navigation-drawer> -->
-    <toolbar :app="app"></toolbar>
+    <toolbar></toolbar>
     <v-content>
       <v-container class="fill-height" fluid>
         <router-view></router-view>

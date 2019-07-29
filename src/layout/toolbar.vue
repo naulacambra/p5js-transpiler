@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app></v-toolbar>
+  <v-toolbar></v-toolbar>
 </template>
 <script>
 export default {

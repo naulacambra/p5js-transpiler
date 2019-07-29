@@ -1,7 +1,7 @@
 <template>
   <v-btn
     color="primary"
-    flat
+    text
     icon
     v-clipboard:copy="value"
     v-clipboard:success="onCopy"
