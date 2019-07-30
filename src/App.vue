@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer app></v-navigation-drawer> -->
-    <toolbar></toolbar>
+    <navigation v-model="drawer" />
+    <toolbar v-model="drawer" />
     <v-content>
       <v-container class="fill-height" fluid>
         <router-view></router-view>
@@ -15,13 +15,22 @@
 <script>
 import snackbar from "./layout/snackbar";
 import toolbar from "./layout/toolbar";
+import navigation from "./layout/navigation";
+import "./utils/string_extensions";
 import "vuetify/dist/vuetify.min.css";
+
 
 export default {
   name: "app",
   components: {
     snackbar,
-    toolbar
+    toolbar,
+    navigation
+  },
+  data() {
+    return {
+      drawer: null
+    };
   }
 };
 </script>
